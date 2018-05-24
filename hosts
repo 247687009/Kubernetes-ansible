@@ -1,0 +1,12 @@
+[local]
+localhost
+
+[Master:children]
+local
+otherMaster
+
+[otherMaster]
+192.168.126.[7:8]
+
+[Node]
+192.168.126.9
