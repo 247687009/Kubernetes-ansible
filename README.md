@@ -15,12 +15,13 @@
 安装过程是参考的[Kubernetes v1.10.x HA全手动苦工安装教学](https://zhangguanzhang.github.io/2018/05/05/Kubernetes_install/)
 
 **下面是我的配置,电脑配置低就一个Node节点**
+
 | IP    | Hostname   |  CPU  |   Memory | 
 | :----- |  :----:  | :----:  |  :----:  |
-| 192.168.126.11 |K8S-M1|  1   |   2G    |
-| 192.168.126.12 |K8S-M2|  1   |   2G    |
-| 192.168.126.13 |K8S-M3|  1   |   2G    |
-| 192.168.126.14 |K8S-N1|  1   |   2G    |
+| 192.168.126.6 |K8S-M1|  1   |   2G    |
+| 192.168.126.7 |K8S-M2|  1   |   2G    |
+| 192.168.126.8 |K8S-M3|  1   |   2G    |
+| 192.168.126.9 |K8S-N1|  1   |   2G    |
 
 # 使用前提和注意事项（所有主机）
 > * 关闭selinux和disbled防火墙(确保getenforce的值是Disabled配置文件改了后应该重启)
@@ -62,18 +63,16 @@ cd Kubernetes-ansible
 修改本机`/etc/hosts`文件改成这样的格式
 ```
 ...
-192.16.35.11 k8s-m1
-192.16.35.12 k8s-m2
-192.16.35.13 k8s-m3
-192.16.35.14 k8s-n1
-192.16.35.15 k8s-n2
-192.16.35.16 k8s-n3
+192.168.123.6 k8s-m1
+192.168.123.7 k8s-m2
+192.168.123.8 k8s-m3
+192.168.123.9 k8s-n1
 ```
 然后使用下面命令来分发hosts文件(如果每台主机密码不一致确保ansible的hosts文件里写了每台主机的ansible_ssh密码和端口下再使用此命令分发hosts文件)
 ```
 ansible all -m copy -a 'src=/etc/hosts dest=/etc/hosts'
 ```
-**4 开始运行安装**
+**4 开始运行安装(虚拟机的话建议现在可以关机做个快照以防万一)**
 
  * 因为有些镜像需要拉取,所以是分成三部,step1是master的管理组件,step2是TLS+NODE,step3是Dashboard+Heapster(不需要Heapster的话注释掉roles/KubernetesExtraAddons/tasks/main.yml里的相关部分)
  1. ansible-playbook -i hosts step1.yml后等待以下输出
@@ -135,5 +134,7 @@ kube-dns-654684d656-j8xzx   3/3       Running   0          10m
 
 ```
  4. 访问地址会在master1的家目录生成对应的使用指导的txt文件,获取Dashboard的token脚本在家目录下
+
+
 
 
