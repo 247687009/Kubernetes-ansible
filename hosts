@@ -6,7 +6,11 @@ local
 otherMaster
 
 [otherMaster]
-192.168.126.[7:8]
+192.168.126.7
+192.168.126.8
 
 [Node]
 192.168.126.9
+
+#[Node]
+#192.168.126.9 ansible_ssh_pass=password ansible_ssh_port=666
