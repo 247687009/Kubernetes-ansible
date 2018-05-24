@@ -75,7 +75,7 @@ ansible all -m copy -a 'src=/etc/hosts dest=/etc/hosts'
 **4 开始运行安装(虚拟机的话建议现在可以关机做个快照以防万一)**
 
  * 因为有些镜像需要拉取,所以是分成三部,step1是master的管理组件,step2是TLS+NODE,step3是Dashboard+Heapster(不需要Heapster的话注释掉roles/KubernetesExtraAddons/tasks/main.yml里的相关部分)
- 1. ansible-playbook -i hosts step1.yml后等待以下输出
+ 1. ansible-playbook  step1.yml后等待以下输出
 ```
 $ watch netstat -ntlp
 Active Internet connections (only servers)
@@ -124,7 +124,7 @@ kube-scheduler-k8s-m1            1/1       Running   0          8m
 kube-scheduler-k8s-m2            1/1       Running   0          8m
 kube-scheduler-k8s-m3            1/1       Running   0          8m
 ```
- 2. 上面输出一致即可运行`step2.yml`
+ 2. 上面输出一致即可运行`ansible-playbook step2.yml`
  3. step2.yml运行完后通过下面命令查看如下输出确保dns的3个pod即可运行step3.yml
 ```
 $ kubectl -n kube-system get po -l k8s-app=kube-dns
