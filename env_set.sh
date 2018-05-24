@@ -20,6 +20,7 @@ systemctl enable docker && systemctl start docker
 
 [ -f '/etc/sysctl.d/k8s.conf' ] && mv /etc/sysctl.d/{,old_}k8s.conf
 
+# set the Kernel forwarding
 {
 sysctl -a |& grep -wq 'net.ipv4.ip_forward = 1' || echo 'net.ipv4.ip_forward = 1'
 sysctl -a |& grep -wq 'net.bridge.bridge-nf-call-ip6tables = 1' || echo 'net.bridge.bridge-nf-call-ip6tables = 1'
