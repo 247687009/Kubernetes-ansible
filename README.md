@@ -25,13 +25,13 @@
 
 # 使用前提和注意事项（所有主机）
 > * 关闭selinux和disbled防火墙(确保getenforce的值是Disabled配置文件改了后应该重启)
-> * swap(/etc/fstab也关闭)
+> * 关闭swap(/etc/fstab也关闭)
 > * 设置ntp同步时间
 > * 安装epel源和openssl和expect
 > * 设置各台主机名(参照我那样,分发hosts看下面使用)
-> * 每台主机端口和密码最好一致(不一致最好懂点ansible)
+> * 每台主机端口和密码最好一致(不一致最好懂点ansible修改hosts文件)
 > * 设置内核转发(参照脚本里的一部分设置)
-> * 安装年份命名的版本的Docker CE(Centos7.x建议先yum update后再安装)
+> * 安装年份命名的版本的`Docker CE`(Centos7.x建议先yum update后再安装)
 
 以上一部分可以使用我写的env_set.sh脚本(仅适用于Centos)
 
@@ -50,7 +50,7 @@ cd Kubernetes-ansible
 
 
  * 修改`group_vars/all.yml`里面的参数
- 1. ansible_ssh_pass为ssh密码(如果每台主机密码不一致请注释掉`all.yml`里的`ansible_ssh_pass`按照的`hosts`里的注释那样写上每台主机的密码）
+ 1. ansible_ssh_pass为ssh密码(如果每台主机密码不一致请注释掉`all.yml`里的`ansible_ssh_pass`后按照的`hosts`文件里的注释那样写上每台主机的密码）
  2. TOKEN可以使用`head -c 32 /dev/urandom | base64`生成替换
  3. TOKEN_ID可以使用`openssl rand 3 -hex`生成
  4. TOKEN_SECRET使用`openssl rand 8 -hex`
