@@ -14,3 +14,4 @@ otherMaster
 
 #[Node]
 #192.168.126.9 ansible_ssh_pass=password ansible_ssh_port=666
+#192.168.126.10 ansible_ssh_pass=password233 ansible_ssh_port=68
