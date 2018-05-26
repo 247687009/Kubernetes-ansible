@@ -36,3 +36,4 @@ passwd=`grep -Po 'ansible_ssh_pass: \K.+\s*$' group_vars/all.yml`
 while read ip ;do
 	./AutoScp "$passwd" ${port:=22} {,$ip:}/etc/hosts
 done < <(ansible all -m shell -a 'echo {{ inventory_hostname }}' | awk '$1 !~/localhost/ && $2~/\|/{print $1}')
+
