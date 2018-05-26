@@ -47,7 +47,6 @@ cd Kubernetes-ansible
 ```
 $ wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz
 $ wget http://ols7lqkih.bkt.clouddn.com/calico-kube-proxy-adm64.tar.gz
-$ wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz
 $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubelet
 $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubectl
 ```
