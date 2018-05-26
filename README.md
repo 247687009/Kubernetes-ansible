@@ -148,7 +148,7 @@ NAME                        READY     STATUS    RESTARTS   AGE
 kube-dns-654684d656-j8xzx   3/3       Running   0          10m
 
 ```
- 4. 访问地址会在master1的家目录生成对应的使用指导的txt文件,获取Dashboard的token脚本在家目录下
+ 4. 访问地址会在master1的家目录生成对应的使用指导的txt文件,获取Dashboard的token脚本(token一段时间会失效页面登陆需要重新获取)在家目录下
 
 
 
