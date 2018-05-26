@@ -44,13 +44,13 @@ cd Kubernetes-ansible
 `github`文件大小限制推送,`kubectl`和`kubelet`大小太大我上传百度云了
 自行下载[download](https://pan.baidu.com/s/1v7uN4ht-7qvA1uk9ZMmuMA)
 百度云限速的我上传到了七牛云
-[images.tar.gz](http://ols7lqkih.bkt.clouddn.com/images.tar.gz)
-
-[calico-kube-proxy-adm64.tar.gz](http://ols7lqkih.bkt.clouddn.com/calico-kube-proxy-adm64.tar.gz)
-
-[kubelet](http://ols7lqkih.bkt.clouddn.com/kubelet)
-
-[kubectl](http://ols7lqkih.bkt.clouddn.com/kubectl)
+```
+$ wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz
+$ wget http://ols7lqkih.bkt.clouddn.com/calico-kube-proxy-adm64.tar.gz
+$ wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz
+$ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubelet
+$ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubectl
+```
 
 文件下载后位置存放参考`FileTree.txt`里的结构
 
