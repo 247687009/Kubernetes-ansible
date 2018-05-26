@@ -19,3 +19,4 @@ spawn scp -P $port $src_file $dest_file
     }
 expect "100%"
 expect eof
+
