@@ -4,7 +4,7 @@
 
 系统可采用`Ubuntu 16.x`与`CentOS 7.x`
 本次安裝的版本：
-> * Kubernetes v1.10.x (1.10.0和1.10.3亲测成功,另外是HA高可用)
+> * Kubernetes v1.10.x (HA高可用,  另外1.10.0和1.10.3亲测成功)
 > * CNI v0.6.0
 > * Etcd v3.1.13
 > * Calico v3.0.4
@@ -51,6 +51,7 @@ $ wget http://ols7lqkih.bkt.clouddn.com/calico-kube-proxy-adm64.tar.gz
 $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubelet
 $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubectl
 ```
+上面是v1.10.0
 如果要其他的1.10.x版本自己下载对应版本文件请更改下面url的版本号然后$url/kubelet和$url/kubectl下载对应版本文件
 https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64
 文件下载后位置存放参考`FileTree.txt`里的结构
