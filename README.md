@@ -41,7 +41,14 @@
 git clone https://github.com/zhangguanzhang/Kubernetes-ansible.git
 cd Kubernetes-ansible
 ```
-`github`文件大小限制推送,`kubectl`和`kubelet`大小太大我上传百度云了,自行下载[download](https://pan.baidu.com/s/1v7uN4ht-7qvA1uk9ZMmuMA),文件下载后位置存放参考`FileTree.txt`里的结构
+`github`文件大小限制推送,`kubectl`和`kubelet`大小太大我上传百度云了
+自行下载[download](https://pan.baidu.com/s/1v7uN4ht-7qvA1uk9ZMmuMA)
+百度云限速的我上传到了七牛云
+`http://ols7lqkih.bkt.clouddn.com/images.tar.gz`
+`http://ols7lqkih.bkt.clouddn.com/calico-kube-proxy-adm64.tar.gz`
+`http://ols7lqkih.bkt.clouddn.com/kubelet`
+`http://ols7lqkih.bkt.clouddn.com/kubectl`
+文件下载后位置存放参考`FileTree.txt`里的结构
 
 **2 配置脚本属性**
 
