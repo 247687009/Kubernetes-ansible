@@ -53,7 +53,7 @@ $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubectl
 ```
 上面是v1.10.0
 
-如果要其他的1.10.x版本自己下载对应版本文件请更改下面url的版本号然后$url/kubelet和$url/kubectl下载对应版本文件
+如果要其他的1.10.x版本自己下载对应版本文件请更改下面url的里的1.10.0版本号然后$url/kubelet和$url/kubectl下载对应版本文件
 
 https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64
 
