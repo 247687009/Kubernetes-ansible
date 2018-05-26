@@ -4,7 +4,7 @@
 
 系统可采用`Ubuntu 16.x`与`CentOS 7.x`
 本次安裝的版本：
-> * Kubernetes v1.10.0 (HA高可用)
+> * Kubernetes v1.10.x (1.10.0和1.10.3亲测成功,另外是HA高可用)
 > * CNI v0.6.0
 > * Etcd v3.1.13
 > * Calico v3.0.4
@@ -43,6 +43,7 @@ cd Kubernetes-ansible
 ```
 `github`文件大小限制推送,`kubectl`和`kubelet`大小太大我上传百度云了
 自行下载[download](https://pan.baidu.com/s/1v7uN4ht-7qvA1uk9ZMmuMA)
+
 百度云限速的我上传到了七牛云
 ```
 $ wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz
@@ -50,14 +51,13 @@ $ wget http://ols7lqkih.bkt.clouddn.com/calico-kube-proxy-adm64.tar.gz
 $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubelet
 $ wget http://ols7lqkih.bkt.clouddn.com/http://ols7lqkih.bkt.clouddn.com/kubectl
 ```
-
+如果要其他的1.10.x版本自己下载对应版本文件请更改下面url的版本号然后$url/kubelet和$url/kubectl下载对应版本文件
+https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd64
 文件下载后位置存放参考`FileTree.txt`里的结构
 
 **2 配置脚本属性**
 
  * 修改当前目录ansible的`hosts`分组成员文件,填写otherMaster和Node下面填写各成员的ip地址,localhost那部分和分组名别动
-
-
 
  * 修改`group_vars/all.yml`里面的参数
  1. ansible_ssh_pass为ssh密码(如果每台主机密码不一致请注释掉`all.yml`里的`ansible_ssh_pass`后按照的`hosts`文件里的注释那样写上每台主机的密码）
