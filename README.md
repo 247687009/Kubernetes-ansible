@@ -33,7 +33,7 @@
 > * 设置内核转发(参照脚本里的一部分设置)
 > * 安装年份命名的版本的`Docker CE`(Centos7.x建议先yum update后再安装)
 
-以上一部分可以使用我写的env_set.sh脚本(仅适用于Centos)
+以上一部分可以使用我写的env_set.sh脚本(部分命令仅适用于Centos)
 
 # 使用(在master1的主机上使用且master1安装了ansible)
 **1 git clone**
