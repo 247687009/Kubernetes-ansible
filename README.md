@@ -10,6 +10,8 @@
 > * Calico v3.0.4
 > * Docker CE latest version(18.03)
 
+docker CE 18.05有bind mount的bug
+
 **管理组件采用`staticPod`或者`daemonSet`形式跑的,仅供用于学习和实验**
 
 安装过程是参考的[Kubernetes v1.10.x HA全手动苦工安装教学](https://zhangguanzhang.github.io/2018/05/05/Kubernetes_install/)
