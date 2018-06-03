@@ -14,7 +14,7 @@ systemctl stop firewalld && systemctl disable firewalld
 
 #disabled the selinux
 setenforce 0
-sed -ri '/^SELINUX=/s#=.+$#=disabled#' /etc/selinux/config
+sed -ri '/^[^#]*SELINUX=/s#=.+$#=disabled#' /etc/selinux/config
 
 systemctl enable docker && systemctl start docker
 
