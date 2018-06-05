@@ -12,7 +12,7 @@
 
 docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)
 
-** 不支持多网卡部署,后续可能会改善 **
+**不支持多网卡部署,后续可能会改善**
 
 **管理组件采用`staticPod`或者`daemonSet`形式跑的,仅供用于学习和实验**
 
