@@ -10,7 +10,7 @@
 > * Calico v3.0.4
 > * Docker CE latest version(18.03)
 
-docker CE 18.05有bind mount的bug
+docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)
 
 **管理组件采用`staticPod`或者`daemonSet`形式跑的,仅供用于学习和实验**
 
