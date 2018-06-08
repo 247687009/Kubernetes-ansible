@@ -40,6 +40,10 @@
 以上一部分可以使用我写的env_set.sh脚本(部分命令仅适用于Centos)
 
 # 使用(在master1的主机上使用且master1安装了ansible)
+
+centos7.5通过yum安装ansible的话最新是2.5.3在使用ansible的unarchive这个模块会报错,推荐安装2.5.4
+rpm -ivh https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.5.4-1.el7.ans.noarch.rpm
+
 **1 git clone**
 ```
 git clone https://github.com/zhangguanzhang/Kubernetes-ansible.git
