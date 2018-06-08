@@ -41,7 +41,7 @@
 
 # 使用(在master1的主机上使用且master1安装了ansible)
 
-centos通过yum安装ansible的话最新是2.5.3在使用ansible的unarchive这个模块会报错,推荐用下面方式安装2.5.4
+centos通过yum安装ansible的话最新是2.5.3,unarchive这个模块会报错,推荐用下面方式安装2.5.4
 ```
 rpm -ivh https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.5.4-1.el7.ans.noarch.rpm
 ```
