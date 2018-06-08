@@ -10,7 +10,7 @@
 > * Calico v3.0.4
 > * Docker CE latest version(18.03)
 
-docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)
+不要用docker CE 18.05,因为docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)
 
 **不支持多网卡部署,后续可能会改善**
 
