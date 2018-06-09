@@ -1,4 +1,5 @@
 .
+├── addNode.yml
 ├── ansible.cfg
 ├── AutoScp
 ├── AutoSsh
@@ -11,11 +12,17 @@
 ├── Image.sh
 ├── k8s.yml
 ├── roles
-│   ├── common
+│   ├── addNode
 │   │   ├── files
+│   │   │   ├── calico-kube-proxy-adm64.tar.gz
+│   │   │   ├── cni-plugins-amd64-v0.6.0.tgz
+│   │   │   └── images.tar.gz
 │   │   ├── tasks
+│   │   │   ├── addNode.yml
+│   │   │   └── main.yml
 │   │   └── templates
-│   │       └── hosts.j2
+│   │       ├── 10-kubelet.conf.j2
+│   │       └── kubelet.service.j2
 │   ├── deployMaster
 │   │   ├── files
 │   │   ├── tasks
