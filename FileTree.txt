@@ -3,14 +3,14 @@
 ├── ansible.cfg
 ├── AutoScp
 ├── AutoSsh
-├── debug.yml
+├── env_set.sh
 ├── FileTree.txt
 ├── group_vars
 │   └── all.yml
 ├── hosts
 ├── hosts_scp.sh
 ├── Image.sh
-├── k8s.yml
+├── README.md
 ├── roles
 │   ├── addNode
 │   │   ├── files
@@ -24,7 +24,6 @@
 │   │       ├── 10-kubelet.conf.j2
 │   │       └── kubelet.service.j2
 │   ├── deployMaster
-│   │   ├── files
 │   │   ├── tasks
 │   │   │   ├── all.yml
 │   │   │   └── main.yml
@@ -51,18 +50,7 @@
 │   │       ├── copy_to_otherMaster.yml
 │   │       ├── etcd_ca.yml
 │   │       └── main.yml
-│   ├── KubernetesExtraAddons
-│   │   ├── files
-│   │   │   ├── getToken.sh
-│   │   │   ├── kube-monitor.yml.conf
-│   │   │   ├── kubernetes-dashboard.yaml.conf
-│   │   │   └── open-api_ClusterRoleBinding.yml.conf
-│   │   ├── tasks
-│   │   │   ├── Dashboard.yml
-│   │   │   ├── Heapster.yml
-│   │   │   └── main.yml
-│   │   └── templates
-│   ├── Kubernets-ca
+│   ├── Kubernetes-ca
 │   │   ├── files
 │   │   │   ├── admin-csr.json
 │   │   │   ├── apiserver-csr.json
@@ -75,6 +63,16 @@
 │   │   │   └── scheduler-csr.json
 │   │   └── tasks
 │   │       ├── ca.yml
+│   │       └── main.yml
+│   ├── KubernetesExtraAddons
+│   │   ├── files
+│   │   │   ├── getToken.sh
+│   │   │   ├── kube-monitor.yml.conf
+│   │   │   ├── kubernetes-dashboard.yaml.conf
+│   │   │   └── openApi-ClusterRoleBinding.yml.conf
+│   │   └── tasks
+│   │       ├── Dashboard.yml
+│   │       ├── Heapster.yml
 │   │       └── main.yml
 │   ├── scp
 │   │   ├── files
@@ -109,10 +107,8 @@
 │           ├── kube-dns.yml.conf.j2
 │           ├── kubelet.service.j2
 │           └── kube-proxy.yml.conf.j2
+├── step1.yml
 ├── step2.yml
-├── step3.retry
-├── step3.yml
-└── test.yml
+└── step3.yml
 
-31 directories, 86 files
-
+25 directories, 86 files
