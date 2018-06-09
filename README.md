@@ -1,5 +1,10 @@
 # Kubernetes-ansible
 
+## 更新
+ * 2018/6/2 - 改善env_set.sh判定
+ * 2018/6/8 - 解决2.5.3的ansible使用脚本报错
+ * 2018/6/9 - 添加增加node剧本
+
 ## ansible部署Kubernetes
 
 系统可采用`Ubuntu 16.x`与`CentOS 7.x`
