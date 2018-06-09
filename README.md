@@ -56,9 +56,9 @@ cd Kubernetes-ansible
 
 百度云限速的我上传到了七牛云
 ```
-$ wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz -O roles/scp/files/images.tar.gz
-$ wget http://ols7lqkih.bkt.clouddn.com/kubelet -O roles/scp/files/kubelet
-$ wget http://ols7lqkih.bkt.clouddn.com/kubectl -O roles/scp/files/kubectl
+wget http://ols7lqkih.bkt.clouddn.com/images.tar.gz -O roles/scp/files/images.tar.gz
+wget http://ols7lqkih.bkt.clouddn.com/kubelet -O roles/scp/files/kubelet
+wget http://ols7lqkih.bkt.clouddn.com/kubectl -O roles/scp/files/kubectl
 ```
 上面是v1.10.0
 
