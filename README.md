@@ -44,6 +44,11 @@
 centos通过yum安装ansible的话最新是2.5.3,unarchive这个模块会报错,推荐用下面方式安装2.5.4
 ```
 rpm -ivh https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.5.4-1.el7.ans.noarch.rpm
+
+#上面安装提示失败的话请先下载下来用yum解决依赖
+yum install wget -y 1 > /dev/null
+wget https://releases.ansible.com/ansible/rpm/release/epel-7-x86_64/ansible-2.5.4-1.el7.ans.noarch.rpm
+yum localinstall ansible-2.5.4-1.el7.ans.noarch.rpm -y
 ```
 
 **1 git clone**
