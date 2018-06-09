@@ -1,9 +1,10 @@
 # Kubernetes-ansible
 
 ## 更新
- * 2018/6/2 - 改善env_set.sh判定
- * 2018/6/8 - 解决2.5.3的ansible使用脚本报错
- * 2018/6/9 - 添加增加node剧本
+ * 2018/05/30 - 改善env_set.sh判定
+ * 2018/06/06 - 解决keepalived的vip某些ip端的判定错误
+ * 2018/06/08 - 解决2.5.3的ansible使用脚本报错
+ * 2018/06/09 - 添加增加node剧本
 
 ## ansible部署Kubernetes
 
