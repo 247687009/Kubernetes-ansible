@@ -15,7 +15,7 @@
 > * Calico v3.0.4
 > * Docker CE latest version(18.03)
 
-不要用docker CE 18.05,因为docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)
+**不要用docker CE 18.05,因为docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)**
 
 **不支持多网卡部署,后续可能会改善**
 
@@ -171,7 +171,7 @@ kube-dns-654684d656-j8xzx   3/3       Running   0          10m
  4. 访问地址会在master1的家目录生成对应的使用指导的txt文件,获取Dashboard的token脚本(token一段时间会失效页面登陆需要重新获取)在家目录下
 
 **5 后续添加Node节点**
- 1. 需要加入的node设置好环境,参照前面的`使用前提配置和注意事项`
+ 1. 需要加入的node先设置好环境,参照前面的`使用前提配置和注意事项`
  3. 在当前的ansible目录改hosts,添加[newNode]分组写上成员
  3. 后执行以下命令添加node
  ```
