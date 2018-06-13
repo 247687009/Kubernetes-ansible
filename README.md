@@ -17,6 +17,7 @@
 > * Docker CE latest version(18.03)
 
 **不要用docker CE 18.05,因为docker CE 18.05有[bind mount的bug](https://github.com/moby/moby/issues/37032)**
+
 建议安装了docker后看看是不是`18.05`,如果是的话卸载掉当前的docker,然后安装`docker-ce-18.03.1.ce`
 
 
