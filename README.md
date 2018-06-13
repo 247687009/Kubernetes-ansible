@@ -194,7 +194,7 @@ NAME      STATUS    ROLES     AGE       VERSION
 k8s-m1    Ready     master    2h        v1.10.0
 k8s-m2    Ready     master    2h        v1.10.0
 k8s-m3    Ready     master    2h        v1.10.0
-k8s-n1    Ready     node      49s        v1.10.0
+k8s-n1    Ready     node      2h        v1.10.0
 k8s-n2    Ready     node      54s        v1.10.0
 k8s-n3    Ready     node      59s       v1.10.0
 ```
