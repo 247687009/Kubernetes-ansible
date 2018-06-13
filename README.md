@@ -89,11 +89,11 @@ https://storage.googleapis.com/kubernetes-release/release/v1.10.0/bin/linux/amd6
 
  * 修改`group_vars/all.yml`里面的参数
  1. ansible_ssh_pass为ssh密码(如果每台主机密码不一致请注释掉`all.yml`里的`ansible_ssh_pass`后按照的`hosts`文件里的注释那样写上每台主机的密码）
- 2. TOKEN可以使用`head -c 32 /dev/urandom | base64`生成替换
- 3. TOKEN_ID可以使用`openssl rand 3 -hex`生成
- 4. TOKEN_SECRET使用`openssl rand 8 -hex`
- 5. VIP为高可用HA的虚ip,NETMASK为VIP的掩码
- 6. INTERFACE_NAME为各机器的ip所在网卡名字Centos可能是ens33,看情况修改
+ 2. `TOKEN`可以使用`head -c 32 /dev/urandom | base64`生成替换
+ 3. `TOKEN_ID`可以使用`openssl rand 3 -hex`生成
+ 4. `TOKEN_SECRET`使用`openssl rand 8 -hex`
+ 5. `VIP`为高可用HA的虚ip,和master在同一个网段没有被使用过的ip即可,`NETMASK`为VIP的掩码
+ 6. `INTERFACE_NAME`为各机器的ip所在网卡名字Centos可能是`ens33`,看情况修改
  7. 其余的参数按需修改,不熟悉最好别乱改
 ----------
 
