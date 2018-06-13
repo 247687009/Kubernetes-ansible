@@ -169,7 +169,10 @@ NAME                        READY     STATUS    RESTARTS   AGE
 kube-dns-654684d656-j8xzx   3/3       Running   0          10m
 
 ```
- 4. 访问地址会在master1的家目录生成对应的使用指导的txt文件,获取Dashboard的token脚本(token一段时间会失效页面登陆需要重新获取)在家目录下
+ 4.至此集群就可以使用了,step3.yml是Dashboard+Heapster
+   需要的话执行`ansible-playbook step3.yml`
+   访问地址会在master1的家目录生成对应的使用指导的txt文件
+   获取Dashboard的token脚本(token一段时间会失效页面登陆需要重新获取)在家目录下
 
 **5 后续添加Node节点**
  1. 需要加入的node先设置好环境,参照前面的`使用前提配置和注意事项`
