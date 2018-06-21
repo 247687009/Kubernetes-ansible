@@ -11,7 +11,8 @@
     - '/etc/systemd/system/kubelet.service.d'
     - "{{ kubelete_data_path }}"
     - "{{ kubernetes_log }}"
-
+    - "{{ kubernetes_path }}/manifests"
+    
 - name: 分发kubelet
   copy:
     src: "{{ kubelet_path }}/kubelet"
