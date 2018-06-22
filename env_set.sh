@@ -26,6 +26,7 @@ systemctl enable docker && systemctl start docker
 sysctl -a |& grep -wq 'net.ipv4.ip_forward = 1' || echo 'net.ipv4.ip_forward = 1'
 sysctl -a |& grep -wq 'net.bridge.bridge-nf-call-ip6tables = 1' || echo 'net.bridge.bridge-nf-call-ip6tables = 1'
 sysctl -a |& grep -wq 'net.bridge.bridge-nf-call-iptables = 1' || echo 'net.bridge.bridge-nf-call-iptables = 1'
+sysctl -a |& grep -wq 'fs.may_detach_mounts = 1' || echo 'fs.may_detach_mounts = 1'
 } > /etc/sysctl.d/k8s.conf
 [ ! -s '/etc/sysctl.d/k8s.conf' ] && /bin/rm -f  /etc/sysctl.d/k8s.conf || sysctl -p /etc/sysctl.d/k8s.conf
 
